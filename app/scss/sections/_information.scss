@@ -1,0 +1,31 @@
+.information {
+  padding: 216px 0 180px;
+  position: relative;
+  &:before {
+    @include content();
+    background: url("../../img/information/ball-4.png") center center no-repeat;
+    background-size: contain;
+    width: 59px;
+    height: 59px;
+    left: 146px;
+    top: 148px;
+  }
+
+  &-img {
+    width: 100%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    position: absolute;
+    top: 50%;
+    left: 103%;
+  }
+
+  &-content {
+    width: 59%;
+    position: relative;
+  }
+
+  &-text {
+    margin-bottom: 50px;
+  }
+}

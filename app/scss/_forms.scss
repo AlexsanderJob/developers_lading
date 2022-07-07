@@ -1,0 +1,92 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+input[type="number"],
+input[type="week"],
+input[type="url"],
+input[type="tel"],
+select,
+textarea {
+	width: 100%;
+	display: block;
+	outline: 0 none;
+	position: relative;
+	transition: all 0.3s;
+	color: $blackText;
+	text-align: left;
+	font-weight: 400;
+	font-family: $font;
+	font-size: 16px;
+	background-color: $white;
+	text-transform: none;
+	border: 1px $blue solid;
+	border-radius: 10px;
+	line-height: 1.25;
+	padding: 18px 19px;
+	&::placeholder {
+		color: $gray;
+	}
+	&:focus {
+		outline: 1px $blue solid;
+	}
+
+	&[disabled],
+	&[disabled="disabled"] {
+		cursor: not-allowed;
+		background-color: #bdbdbd;
+	}
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+	white-space: normal;
+	min-height: 140px;
+	line-height: 1.2;
+}
+
+button,
+.btn {
+	outline: 0 none;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.3s;
+	letter-spacing: 0;
+	text-decoration: none !important;
+	border: 2px $green solid;
+	line-height: 1.05;
+	padding: 20px 15px;
+	font-size: 15px;
+	min-width: 270px;
+	text-align: center;
+	background-color: $green;
+	font-weight: 700;
+	font-family: $font;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: $white;
+	box-shadow: none;
+	&:hover {
+		border-color: $blue;
+	}
+	&:active {
+		background: $blue;
+		transform: translateY(2px);
+	}
+	@media screen and (max-width: $mobile) {
+    	min-width: 1px;
+		max-width: 311px;
+		width: 100%;
+	}
+
+
+
+	&[disabled],
+	&[disabled="disabled"] {
+		cursor: not-allowed;
+	}
+}

@@ -1,0 +1,81 @@
+.service {
+  padding: 120px 0 107px;
+  background: $blueLight;
+  position: relative;
+  &:after {
+    @include content();
+    background: url("../../img/service/bag.png") center center no-repeat;
+    background-size: contain;
+    width: 133px;
+    height: 148px;
+    right: 136px;
+    bottom: 92px;
+  }
+
+  &-accordion {
+    background: $white;
+    border-radius: 15px;
+    margin: 18px 0;
+    &.active {
+      .service-accordion-title {
+        font-size: 21px;
+        font-weight: 700;
+        &:after {
+          background: $blue;
+        }
+        &:before {
+          transform: rotate(315deg);
+          margin-top: -7px;
+        }
+      }
+
+    }
+
+    &-title{
+      cursor: pointer;
+      position: relative;
+      transition: all .3s;
+      padding: 14px 50px 14px 94px;
+      &:after,
+      &:before {
+        @include content();
+        transition: all .3s;
+      }
+      &:after {
+        background: $green;
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        margin-top: -12px;
+        left: 44px;
+      }
+      &:before {
+        border-top: black 1px solid;
+        border-right: black 1px solid;
+        width: 15px;
+        height: 15px;
+        transform: rotate(135deg);
+        right: 47px;
+        color: $black;
+        top: 50%;
+        margin-top: -13px;
+      }
+    }
+
+    &-content {
+      display: none;
+      padding: 25px 70px 54px 56px;
+
+      &-inner {
+        padding-left: 40px;
+        border-left: $black 1px solid;
+      }
+    }
+  }
+
+  &-h2 {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}

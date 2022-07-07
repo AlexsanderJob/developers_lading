@@ -1,0 +1,62 @@
+.header {
+  background: $blue;
+  padding: 16px 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    margin-right: 15px;
+    width: 242px;
+  }
+
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        padding: 0 19px;
+        &:last-child {
+          padding-right: 30px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 16px;
+        font-weight: 600;
+        padding-top: 2px;
+        border-top: 2px transparent solid;
+        border-bottom: 2px transparent solid;
+        &:hover {
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+
+  &-button {
+    .btn {
+      min-width: 170px;
+      padding: 10px;
+      &:hover {
+        border-color: $white;
+      }
+      &:active {
+        color: $blue;
+        background: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.hero {
+  padding: 170px 0 180px;
+  position: relative;
+  &:after {
+    @include content();
+    background: url("../../img/hero/ball-1.png") center center no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    top: 118px;
+    left: 230px;
+  }
+  &:before {
+    @include content();
+    background: url("../../img/hero/layer-v2.png") center center no-repeat;
+    background-size: contain;
+    width: 227px;
+    height: 225px;
+    left: 0;
+    bottom: 23px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-inner {
+    width: 50%;
+  }
+
+  &-text {
+    margin-bottom: 48px;
+  }
+
+  &-img {
+    position: relative;
+    width: 35%;
+    transform: scale(1.9) translate(11px, 53px);
+    &:after {
+      @include content();
+      top: 0;
+      height: 100%;
+      left: 50%;
+      background: $blueLight;
+      width: 92vw;
+      border-radius: 40%;
+      z-index: 0;
+      margin-top: -61px;
+    }
+    img {
+      position: relative;
+      display: block;
+      z-index: 1;
+    }
+  }
+}

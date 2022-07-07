@@ -1,0 +1,134 @@
+.steps {
+  padding: 123px 0 272px;
+  position: relative;
+  &:after {
+    @include content();
+    background: url("../../img/steps/wave.png") center center no-repeat;
+    background-size: contain;
+    width: 190px;
+    height: 70px;
+    right: 176px;
+    bottom: 49px;
+  }
+  &:before {
+    @include content();
+    background: url("../../img/steps/ball-2.png") center center no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    left: 181px;
+    top: 129px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 82px;
+  }
+
+  &-slider {
+    padding-right: 42.5%;
+    margin: 0 -12px;
+    &-block {
+      display: flex !important;
+      justify-content: space-between;
+      border-radius: 15px;
+      border: 2px $blue solid;
+      padding: 85px 33px 49px 70px;
+      height: 100%;
+    }
+
+    &-barrel {
+      padding-right: 12px;
+      padding-left: 12px;
+      height: 100%;
+    }
+  }
+
+  &-text {
+    width: 53%;
+  }
+
+  &-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .slick {
+    position: relative;
+
+    &-list {
+      overflow: visible;
+    }
+
+    &-track,
+    &-slide {
+      display: flex;
+      height: auto;
+    }
+
+    &-slide > div {
+      height: 100%;
+      width: 100%;
+    }
+
+
+    &-arrow {
+      background: transparent;
+      padding: 0;
+      border: 2px #67AEFC solid;
+      font-size: 0;
+      position: absolute;
+      min-width: 1px;
+      border-radius: 15px;
+      width: 60px;
+      height: 60px;
+      bottom: -142px;
+      &:hover {
+        background: $blue;
+
+        &:after {
+          border-top-color: $white;
+          border-right-color: $white;
+        }
+      }
+    }
+
+    &-prev {
+      left: 50%;
+      margin-left: -75px;
+      &:after {
+        @include content();
+        border-top: black 1px solid;
+        border-right: black 1px solid;
+        width: 20px;
+        height: 20px;
+        transform: rotate(225deg);
+        color: $black;
+        right: 50%;
+        margin-right: -15px;
+        top: 20px;
+      }
+    }
+
+    &-next {
+      right: 50%;
+      margin-right: -75px;
+      &:after {
+        @include content();
+        border-top: black 1px solid;
+        border-right: black 1px solid;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        color: $black;
+        right: 50%;
+        margin-right: -7px;
+        top: 20px;
+      }
+    }
+  }
+}
+
+
+
+

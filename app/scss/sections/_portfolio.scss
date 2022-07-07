@@ -1,0 +1,77 @@
+.portfolio {
+  padding: 120px 0 82px;
+  background: $blueLight;
+  text-align: center;
+  position: relative;
+  &:after {
+    @include content();
+    background: url("../../img/portfolio/ball-3.png") center center no-repeat;
+    background-size: contain;
+    width: 115px;
+    height: 115px;
+    right: 112px;
+    bottom: 244px;
+  }
+  &:before {
+    @include content();
+    background: url("../../img/portfolio/wave-2.png") center center no-repeat;
+    background-size: contain;
+    width: 218px;
+    height: 226px;
+    top: 303px;
+    left: 15px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-img {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 447px;
+    margin-bottom: 38px;
+    position: relative;
+    width: 48.1%;
+    &:hover .portfolio-inner {
+      opacity: 1;
+      visibility: visible;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &-inner {
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    color: $white;
+    position: absolute;
+    background: $blue;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &-subtitle {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  &-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+}
