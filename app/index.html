@@ -22,23 +22,28 @@
 							<img src="img/Logo.png" alt="#">
 						</a>
 					</div>
-					<div class="header-navigation">
+					<button class="header-menu-btn j-btn-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="header-menu j-menu">
 						<ul>
 							<li>
-								<a href="#">Услуги</a>
+								<a href="#service">Услуги</a>
 							</li>
 							<li>
-								<a href="#">Портфолио</a>
+								<a href="#portfolio">Портфолио</a>
 							</li>
 							<li>
-								<a href="#">Этапы</a>
+								<a href="#steps">Этапы</a>
 							</li>
 							<li>
 								<a href="#">Дизайнеры</a>
 							</li>
 						</ul>
 						<div class="header-button">
-							<a href="#" class="btn">Заказать</a>
+							<a href="#discuss" class="btn">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -49,12 +54,12 @@
 			<div class="wr">
 				<div class="hero-content">
 					<div class="hero-inner">
-						<h1>Разработка интернет-магазина c нуля за неделю</h1>
+						<h1 class="hero-title">Разработка интернет-магазина c нуля за неделю</h1>
 						<div class="hero-text">Дизайн интернет магазина, элементов микро UX, корзин, личного кабинета - от фирменного стиля
 							до пользовательского интерфейса в сжатые сроки
 							с командой Virtual Designers
 						</div>
-						<a	href="#" class="btn">Заказать</a>
+						<a	href="#discuss" class="btn">Заказать</a>
 					</div>
 					<div class="hero-img">
 						<img src="img/hero/cart-v3.png" alt="#">
@@ -63,7 +68,7 @@
 			</div>
 		</div><!-- hero -->
 
-		<div class="service">
+		<div id="service" class="service">
 			<div class="wr">
 				<div class="service-content">
 					<h2 class="service-h2">Что входит в услугу по созданию дизайна интернет-магазина?</h2>
@@ -124,10 +129,10 @@
 			</div>
 		</div><!-- service -->
 
-		<div class="steps">
+		<div id="steps" class="steps">
 			<div class="wr">
 				<h2>Этапы разработки интернет-магазина</h2>
-				<div class="steps-slider">
+				<div class="steps-slider j-steps-slider">
 					<div class="steps-slider-barrel">
 						<div class="steps-slider-block">
 							<div class="steps-text">
@@ -195,13 +200,10 @@
 			</div>
 		</div><!-- steps -->
 
-
-		<div class="portfolio">
+		<div id="portfolio" class="portfolio">
 			<div class="wr">
-				<div class="portfolio-text">
-					<h2>Примеры онлайн-магазинов</h2>
-				</div>
-				<div class="portfolio-content">
+				<h2 class="portfolio-title">Примеры онлайн-магазинов</h2>
+				<div class="portfolio-content j-portfolio-slider">
 					<div class="portfolio-img">
 						<a href="#" class="portfolio-inner">
 							<span class="portfolio-subtitle h3">Онлайн-магазин</span>
@@ -259,28 +261,28 @@
 					<div class="information-text">
 						Если Вы владелец онлайн-магазина или только начинаете свой путь в электронной коммерции и вам нужен уникальный дизайн онлайн магазина для стартапа, обратитесь к нашему веб дизайнеру. За выгодную цену и короткий период времени, он поможет  визуализировать ваш веб проект.
 					</div>
-					<a href="#" class="btn">Оставить заявку</a>
+					<a href="#discuss" class="btn">Оставить заявку</a>
 				</div>
 			</div>
 		</div><!-- information -->
 
 
-		<div class="discuss">
+		<div id="discuss" class="discuss">
 			<div class="wr">
 				<div class="discuss-content">
-					<h2>Обсудить проект</h2>
+					<h2 class="discuss-title">Обсудить проект</h2>
 					<div class="discuss-text">Расскажите о своих бизнес-целях и мы поможем вам в их достижении</div>
 					<form action="#" class="discuss-form">
 						<div class="discuss-form-item">
-							<input type="text"  name="name" placeholder="Имя" />
+							<input type="text"  name="name" placeholder="Имя" required />
 						</div>
 						<div class="discuss-form-item">
-							<input type="text" id="phone-number" name="phone" maxlength="14"  placeholder="Telegram/Viber" />
+							<input type="text" id="phone-number" name="phone" maxlength="14"  placeholder="Telegram/Viber" required />
 						</div>
 						<div class="discuss-form-item">
-							<input type="text"  name="email" placeholder="Email" />
+							<input type="email"  name="email" placeholder="Email" required />
 						</div>
-						<div class="discuss-button">
+						<div class="discuss-form-button">
 							<button type="submit">Отправить</button>
 						</div>
 					</form>
@@ -296,7 +298,7 @@
 						<div class="footer-logo">
 							<a href="#"><img src="img/Logo.png" alt="#"></a>
 						</div>
-						<div class="footer-message">
+						<div class="footer-message b-desktop">
 							<a href="#"><img src="img/social/instagram.png" alt="#"></a>
 							<a href="#"><img src="img/social/facebook.png" alt="#"></a>
 							<a href="#"><img src="img/social/telegram.png" alt="#"></a>
@@ -329,6 +331,13 @@
 								Валерия: <a href="tel:+380 (000) 000-00-00">+380 (000) 000-00-00</a>
 							</div>
 						</div>
+					</div>
+					<div class="footer-message b-mobile">
+						<a href="#"><img src="img/social/instagram.png" alt="#"></a>
+						<a href="#"><img src="img/social/facebook.png" alt="#"></a>
+						<a href="#"><img src="img/social/telegram.png" alt="#"></a>
+						<a href="#"><img src="img/social/viber.png" alt="#"></a>
+						<a href="#"><img src="img/social/whatsApp.png" alt="#"></a>
 					</div>
 					<div class="footer-info">
 						<a href="mailto:hr@dv-s.com">hr@dv-s.com</a>

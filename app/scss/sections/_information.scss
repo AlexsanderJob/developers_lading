@@ -1,6 +1,12 @@
 .information {
   padding: 216px 0 180px;
   position: relative;
+  @media only screen and (max-width: $tablet) {
+    padding: 100px 0 100px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 44px 0 50px;
+  }
   &:before {
     @include content();
     background: url("../../img/information/ball-4.png") center center no-repeat;
@@ -9,6 +15,15 @@
     height: 59px;
     left: 146px;
     top: 148px;
+    @media only screen and (max-width: $tablet) {
+      content: none;
+    }
+  }
+
+  h2 {
+    @media only screen and (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   &-img {
@@ -18,14 +33,40 @@
     position: absolute;
     top: 50%;
     left: 103%;
+    @media only screen and (max-width: $desktop-xl) {
+      width: 35vw;
+    }
+    @media only screen and (max-width: $mobile) {
+      position: static;
+      transform: none;
+      top: unset;
+      left: unset;
+      max-width: 250px;
+      margin: 0 auto 30px;
+      width: 100%;
+    }
   }
 
   &-content {
     width: 59%;
     position: relative;
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &-text {
     margin-bottom: 50px;
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 31px;
+    }
+  }
+
+  .btn {
+    @media only screen and (max-width: $mobile) {
+      display: table;
+      margin: 0 auto;
+    }
   }
 }
+

@@ -2,6 +2,12 @@
   padding: 180px 0 128px;
   background: $blueLight;
   position: relative;
+  @media only screen and (max-width: $desktop-xl) {
+    padding: 80px 0 60px;
+  }
+    @media only screen and (max-width: $tablet) {
+    padding: 43px 0 35px;
+  }
   &:after {
     @include content();
     background: url("../../img/discuss/phoneCall.png") center center no-repeat;
@@ -10,6 +16,20 @@
     height: 344px;
     left: 224px;
     top: 264px;
+    @media only screen and (max-width: $desktop-xl) {
+      left: 120px;
+    }
+    @media only screen and (max-width: $desktop-l) {
+      left: 50px;
+      width: 280px;
+      height: 280px;
+    }
+    @media only screen and (max-width: $tablet) {
+      margin: 0 auto;
+      background: url("../../img/discuss/mobile/Postpaid.png") center center no-repeat;
+      background-size: contain;
+      position: static;
+    }
   }
   &:before {
     @include content();
@@ -19,8 +39,25 @@
     height: 145px;
     right: 396px;
     top: 289px;
+    @media only screen and (max-width: $desktop-xl) {
+      right: 240px;
+    }
+    @media only screen and (max-width: $desktop-xl) {
+      right: 100px;
+    }
+    @media only screen and (max-width: $tablet) {
+      content: none;
+      position: static;
+      width: 285px;
+      height: 290px;
+    }
   }
 
+  &-title {
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 10px;
+    }
+  }
 
   &-content {
     max-width: 470px;
@@ -29,6 +66,9 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: $tablet) {
+      padding-bottom: 42px;
+    }
   }
 
   &-text {
@@ -39,10 +79,19 @@
 
     &-item {
       padding-bottom: 20px;
+      @media only screen and (max-width: $mobile) {
+        padding-bottom: 9px;
+      }
     }
-  }
 
-  &-button {
-    margin-top: 10px;
+    &-button {
+      margin-top: 10px;
+      @media only screen and (max-width: $mobile) {
+        margin-top: 7px;
+        button {
+          max-width: none;
+        }
+      }
+    }
   }
 }

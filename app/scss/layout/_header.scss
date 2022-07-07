@@ -1,6 +1,11 @@
 .header {
   background: $blue;
   padding: 16px 0;
+  position: relative;
+  z-index: 100;
+  @media only screen and (max-width: $tablet) {
+    padding: 9px 0;
+  }
 
   &-content {
     display: flex;
@@ -11,23 +16,49 @@
   &-logo {
     margin-right: 15px;
     width: 242px;
+    @media only screen and (max-width: $tablet) {
+      margin-right: 0;
+      width: 136px;
+    }
+    a,
+    img {
+      display: block;
+    }
   }
 
-  &-navigation {
-    display: flex;
+  &-menu {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    @media only screen and (min-width: $tablet + 1) {
+      display: flex !important;
+      height: auto !important;
+    }
+    @media only screen and (max-width: $tablet) {
+      display: none;
+      position: absolute;
+      background: $blue;
+      left: 0;
+      width: 100%;
+      top: 100%;
+    }
 
     ul {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      @media only screen and (max-width: $tablet) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px 15px;
+      }
 
       li {
         padding: 0 19px;
-        &:last-child {
-          padding-right: 30px;
+        @media only screen and (max-width: $tablet) {
+          padding: 20px 0;
         }
       }
 
@@ -39,14 +70,42 @@
         padding-top: 2px;
         border-top: 2px transparent solid;
         border-bottom: 2px transparent solid;
+        @media only screen and (max-width: $tablet) {
+          text-transform: uppercase;
+        }
         &:hover {
           border-bottom-color: $white;
         }
       }
     }
+
+    &-btn {
+      min-width: 1px;
+      padding: 0;
+      background: transparent;
+      display: none;
+      align-items: center;
+      width: auto;
+      justify-content: center;
+      border: none;
+      @media only screen and (max-width: $tablet) {
+        display: flex;
+      }
+      span {
+        display: block;
+        margin: 2px;
+        width: 13px;
+        height: 13px;
+        border-radius: 100%;
+        background: $white;
+      }
+    }
   }
 
   &-button {
+    @media only screen and (max-width: $tablet) {
+      display: none;
+    }
     .btn {
       min-width: 170px;
       padding: 10px;

@@ -2,6 +2,10 @@
   background: $blue;
   color: $white;
   padding: 92px 0 80px;
+  @media only screen and (max-width: $tablet) {
+    padding: 46px 0 60px;
+    font-size: 16px;
+  }
 
   a {
     color: $white;
@@ -12,6 +16,15 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 120px;
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    @media only screen and (max-width: $mobile) {
+      padding-bottom: 18px;
+    }
   }
 
   &-social,
@@ -19,16 +32,30 @@
   &-info {
     width: 31.333%;
     max-width: 280px;
+    @media only screen and (max-width: $tablet) {
+      width: 100%;
+      max-width: none;
+    }
   }
 
-
-  &-contacts,
   &-info {
-    padding-top: 27px;
+    @media only screen and (max-width: $mobile) {
+      padding-top: 44px;
+    }
+  }
+
+  &-social,
+  &-info {
+    @media only screen and (max-width: $tablet) {
+      text-align: center;
+    }
   }
 
   &-logo {
     padding-bottom: 45px;
+    @media only screen and (max-width: $tablet) {
+      padding-bottom: 12px;
+    }
   }
 
   &-message {
@@ -36,6 +63,20 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    &.b-desktop {
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+    }
+    &.b-mobile {
+      display: none;
+      @media only screen and (max-width: $tablet) {
+        display: flex;
+      }
+    }
+    @media only screen and (max-width: $tablet) {
+      width: 280px;
+    }
     a,
     img {
       display: block;
@@ -43,18 +84,36 @@
   }
 
   &-contacts {
+    padding-top: 27px;
     max-width: 360px;
+    @media only screen and (max-width: $tablet) {
+      padding-bottom: 60px;
+      padding-top: 4px;
+    }
   }
 
   &-contacts-item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-contacts-icon {
     width: 22px;
     height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $mobile) {
+      width: 30px;
+      height: 30px;
+    }
     img {
       display: block;
       max-height: 100%;
@@ -66,6 +125,10 @@
     padding-left: 10px;
     font-weight: 400;
     width: calc(100% - 22px);
+    @media only screen and (max-width: $mobile) {
+      font-size: 16px;
+      width: calc(100% - 30px);
+    }
     a {
       white-space: nowrap;
     }
@@ -73,5 +136,8 @@
 
   &-copyright {
     text-align: center;
+    @media only screen and (max-width: $mobile) {
+      font-size: 14px;
+    }
   }
 }

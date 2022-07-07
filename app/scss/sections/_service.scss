@@ -2,6 +2,12 @@
   padding: 120px 0 107px;
   background: $blueLight;
   position: relative;
+  @media only screen and (max-width: $desktop-xl) {
+    padding: 80px 0 50px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 15px 0 20px;
+  }
   &:after {
     @include content();
     background: url("../../img/service/bag.png") center center no-repeat;
@@ -10,22 +16,50 @@
     height: 148px;
     right: 136px;
     bottom: 92px;
+    @media only screen and (max-width: $desktop-xl) {
+      right: 20px;
+      bottom: 20px;
+    }
+    @media only screen and (max-width: $tablet) {
+      content: none;
+    }
+  }
+
+  .wr {
+    position: relative;
+    z-index: 1;
   }
 
   &-accordion {
     background: $white;
     border-radius: 15px;
     margin: 18px 0;
+    @media only screen and (max-width: $mobile) {
+      margin: 9px 0;
+    }
     &.active {
       .service-accordion-title {
         font-size: 21px;
         font-weight: 700;
+        @media only screen and (max-width: $mobile) {
+          font-size: 17px;
+        }
         &:after {
           background: $blue;
+          top: 17px;
+          @media only screen and (max-width: $tablet) {
+            top: 21px;
+          }
+          @media only screen and (max-width: $mobile) {
+            top: 23px;
+          }
         }
         &:before {
           transform: rotate(315deg);
-          margin-top: -7px;
+          top: 25px;
+          @media only screen and (max-width: $tablet) {
+            top: 28px;
+          }
         }
       }
 
@@ -35,7 +69,10 @@
       cursor: pointer;
       position: relative;
       transition: all .3s;
-      padding: 14px 50px 14px 94px;
+      padding: 14px 85px 14px 94px;
+      @media only screen and (max-width: $mobile) {
+        padding: 16px 70px 16px 56px;
+      }
       &:after,
       &:before {
         @include content();
@@ -46,9 +83,17 @@
         border-radius: 100%;
         width: 24px;
         height: 24px;
-        top: 50%;
-        margin-top: -12px;
+        top: 15px;
         left: 44px;
+        @media only screen and (max-width: $tablet) {
+          top: 17px;
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 15px;
+          height: 15px;
+          left: 24px;
+          top: 23px;
+        }
       }
       &:before {
         border-top: black 1px solid;
@@ -58,18 +103,30 @@
         transform: rotate(135deg);
         right: 47px;
         color: $black;
-        top: 50%;
-        margin-top: -13px;
+        top: 15px;
+        @media only screen and (max-width: $tablet) {
+          top: 17px;
+        }
+        @media only screen and (max-width: $mobile) {
+          right: 30px;
+          top: 19px;
+        }
       }
     }
 
     &-content {
       display: none;
       padding: 25px 70px 54px 56px;
+      @media only screen and (max-width: $mobile) {
+        padding: 0 41px 43px 32px;
+      }
 
       &-inner {
         padding-left: 40px;
         border-left: $black 1px solid;
+        @media only screen and (max-width: $mobile) {
+          padding-left: 25px;
+        }
       }
     }
   }
@@ -77,5 +134,8 @@
   &-h2 {
     text-align: center;
     margin-bottom: 80px;
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 23px;
+    }
   }
 }

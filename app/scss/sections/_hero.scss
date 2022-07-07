@@ -1,6 +1,14 @@
 .hero {
   padding: 170px 0 180px;
   position: relative;
+  @media only screen and (max-width: $desktop-xl) {
+    padding-top: 120px;
+    padding-bottom: 140px;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding-top: 37px;
+    padding-bottom: 51px;
+  }
   &:after {
     @include content();
     background: url("../../img/hero/ball-1.png") center center no-repeat;
@@ -9,6 +17,10 @@
     height: 55px;
     top: 118px;
     left: 230px;
+    @media only screen and (max-width: $desktop-xl) {
+      top: 40px;
+      left: 50px;
+    }
   }
   &:before {
     @include content();
@@ -18,25 +30,87 @@
     height: 225px;
     left: 0;
     bottom: 23px;
+    @media only screen and (max-width: $desktop-xl) {
+      bottom: 10px;
+    }
+    @media only screen and (max-width: $mobile) {
+      bottom: unset;
+      top: 10px;
+      background: url("../../img/hero/Ellipse-v2.png") center center no-repeat;
+      background-size: contain;
+      width: 55px;
+      height: 66px;
+      left: -3px;
+    }
+  }
+
+  .wr {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-title {
+    @media only screen and (max-width: $mobile) {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
   }
 
   &-content {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &-inner {
     width: 50%;
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      transform: none;
+    }
   }
 
   &-text {
     margin-bottom: 48px;
+    position: relative;
+    @media only screen and (max-width: $mobile) {
+      line-height: 1.3;
+      margin-bottom: 35px;
+    }
+    &:after {
+      width: 15px;
+      height: 15px;
+      background: url("../img/hero/circle.png") center center no-repeat;
+      background-size: contain;
+      z-index: -1;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: $mobile) {
+        @include content();
+      }
+    }
   }
 
   &-img {
     position: relative;
     width: 35%;
     transform: scale(1.9) translate(11px, 53px);
+    @media only screen and (max-width: $tablet) {
+      transform: scale(1.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      max-width: 350px;
+      transform: none;
+      margin-bottom: 40px;
+    }
     &:after {
       @include content();
       top: 0;
@@ -47,6 +121,10 @@
       border-radius: 40%;
       z-index: 0;
       margin-top: -61px;
+      @media only screen and (max-width: $tablet) {
+        border-radius: 50%;
+        margin-top: 0;
+      }
     }
     img {
       position: relative;

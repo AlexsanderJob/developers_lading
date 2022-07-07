@@ -39,7 +39,7 @@ html {
 	letter-spacing: 0;
 	color: $black;
 
-	@media only screen and (max-width: $mobile) {
+	@media only screen and (max-width: $tablet) {
 		font-size: 17px;
 		line-height: 1.75;
 	}
@@ -61,6 +61,72 @@ body {
 	max-width: 1210px;
 	margin: 0 auto;
 	width: 100%;
+}
+
+.slick {
+	&-arrow {
+		background: transparent;
+		padding: 0;
+		border: 2px #67AEFC solid;
+		font-size: 0;
+		position: absolute;
+		min-width: 1px;
+		border-radius: 15px;
+		width: 60px;
+		height: 60px;
+		bottom: -142px;
+		@media only screen and (max-width: $tablet) {
+			bottom: -86px;
+		}
+		&:hover {
+			background: $blue;
+
+			&:after {
+				border-top-color: $white;
+				border-right-color: $white;
+			}
+		}
+	}
+
+	&-prev {
+		left: 50%;
+		margin-left: -75px;
+		&:after {
+			@include content();
+			border-top: black 1px solid;
+			border-right: black 1px solid;
+			width: 20px;
+			height: 20px;
+			transform: rotate(225deg);
+			color: $black;
+			right: 50%;
+			margin-right: -15px;
+			top: 20px;
+		}
+		@media only screen and (max-width: $mobile) {
+			margin-left: -113px;
+		}
+	}
+
+	&-next {
+		right: 50%;
+		margin-right: -75px;
+		&:after {
+			@include content();
+			border-top: black 1px solid;
+			border-right: black 1px solid;
+			width: 20px;
+			height: 20px;
+			transform: rotate(45deg);
+			color: $black;
+			right: 50%;
+			margin-right: -7px;
+			top: 20px;
+		}
+		@media only screen and (max-width: $mobile) {
+			margin-right: -113px;
+		}
+	}
 }
 
 
